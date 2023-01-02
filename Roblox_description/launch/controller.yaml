@@ -1,0 +1,27 @@
+Roblox_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  wheelshaft_rev_joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wheelshaft_rev_joint1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wheelshaft_rev_joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wheelshaft_rev_joint2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wheelshaft_rev_joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wheelshaft_rev_joint3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wheelshaft_rev_joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wheelshaft_rev_joint4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  tele_cam_rotatory_rev_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: tele_cam_rotatory_rev_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}

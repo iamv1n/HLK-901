@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find Roblox_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="Roblox" args="wheelshaft_rev_joint1_position_controller wheelshaft_rev_joint2_position_controller wheelshaft_rev_joint3_position_controller wheelshaft_rev_joint4_position_controller tele_cam_rotatory_rev_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/Roblox/joint_states"/>
+</node>
+
+</launch>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<robot name="Roblox" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="wheelshaft_rev_joint1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelshaft_rev_joint1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelshaft_rev_joint1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="wheelshaft_rev_joint2_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelshaft_rev_joint2">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelshaft_rev_joint2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="wheelshaft_rev_joint3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelshaft_rev_joint3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelshaft_rev_joint3_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="wheelshaft_rev_joint4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheelshaft_rev_joint4">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="wheelshaft_rev_joint4_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="tele_cam_rotatory_rev_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="tele_cam_rotatory_rev_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="tele_cam_rotatory_rev_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<robot name="Roblox" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Roblox_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Roblox_description)/urdf/Roblox.trans" />
+<xacro:include filename="$(find Roblox_description)/urdf/Roblox.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0004149296476484467 0.0 0.0075806807639669585" rpy="0 0 0"/>
+    <mass value="1.337296126748008"/>
+    <inertia ixx="0.000742" iyy="0.002227" izz="0.002917" ixy="-0.0" iyz="0.0" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_back_1">
+  <inertial>
+    <origin xyz="8.940654883105026e-10 -0.00350000000000001 7.450579389556289e-11" rpy="0 0 0"/>
+    <mass value="0.06747916431000829"/>
+    <inertia ixx="7e-06" iyy="1.4e-05" izz="7e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06 -0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06 -0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_front_1">
+  <inertial>
+    <origin xyz="-8.940655021882904e-10 -0.00350000000000001 7.450580517126548e-11" rpy="0 0 0"/>
+    <mass value="0.0674791643100083"/>
+    <inertia ixx="7e-06" iyy="1.4e-05" izz="7e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06 -0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06 -0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_back_2">
+  <inertial>
+    <origin xyz="8.940654883105026e-10 0.00350000000000001 7.450579389556289e-11" rpy="0 0 0"/>
+    <mass value="0.06747916431000829"/>
+    <inertia ixx="7e-06" iyy="1.4e-05" izz="7e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06 0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_back_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06 0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_back_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_front_2">
+  <inertial>
+    <origin xyz="-8.940655021882904e-10 0.00350000000000001 7.450580517126548e-11" rpy="0 0 0"/>
+    <mass value="0.0674791643100083"/>
+    <inertia ixx="7e-06" iyy="1.4e-05" izz="7e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.06 0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_front_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.06 0.05 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/wheel_front_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_top_1">
+  <inertial>
+    <origin xyz="-6.70582547823706e-10 2.6216226561402063e-18 0.02264531650017722" rpy="0 0 0"/>
+    <mass value="0.4255197034289349"/>
+    <inertia ixx="0.000104" iyy="0.000112" izz="9.4e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.045 -0.0 -0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/camera_top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.045 -0.0 -0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/camera_top_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="0.04 0.0 0.005000000000000001" rpy="0 0 0"/>
+    <mass value="0.0314"/>
+    <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arduino_module_base_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.03924999999999999"/>
+    <inertia ixx="1.9e-05" iyy="1.4e-05" izz="3.3e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/arduino_module_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/arduino_module_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ultrasonic_sensor_1">
+  <inertial>
+    <origin xyz="0.04999999999999999 0.014999999999999996 0.009496395772899326" rpy="0 0 0"/>
+    <mass value="0.007428843895667492"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.04 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/ultrasonic_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.04 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/ultrasonic_sensor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="infra_red_sensor__1">
+  <inertial>
+    <origin xyz="-0.020000000000000025 -0.015 0.009496395772899326" rpy="0 0 0"/>
+    <mass value="0.007428843895667492"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07 -0.04 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/infra_red_sensor__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07 -0.04 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Roblox_description/meshes/infra_red_sensor__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheelshaft_rev_joint1" type="continuous">
+  <origin xyz="0.06 0.05 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_back_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheelshaft_rev_joint2" type="continuous">
+  <origin xyz="-0.06 0.05 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_front_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheelshaft_rev_joint3" type="continuous">
+  <origin xyz="0.06 -0.05 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_back_2"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheelshaft_rev_joint4" type="continuous">
+  <origin xyz="-0.06 -0.05 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheel_front_2"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="tele_cam_rotatory_rev_joint" type="continuous">
+  <origin xyz="-0.045 0.0 0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_top_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="lidar_support" type="fixed">
+  <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="arduino_module_rigid" type="fixed">
+  <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arduino_module_base_1"/>
+</joint>
+
+<joint name="ultrasonic_support_joint" type="fixed">
+  <origin xyz="0.0 -0.04 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="ultrasonic_sensor_1"/>
+</joint>
+
+<joint name="infrared_support_joint" type="fixed">
+  <origin xyz="0.07 0.04 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="infra_red_sensor__1"/>
+</joint>
+
+</robot>
